@@ -1,0 +1,8 @@
+# Ativa o mecanismo de reescrita
+RewriteEngine On
+
+# Remove a extensão do arquivo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
